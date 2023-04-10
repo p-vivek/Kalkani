@@ -1,0 +1,39 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j,k,x,t=0;
+    int n;
+
+printf("Enter your lucky Number");
+scanf("%d",&n);
+  for(i=1;i<=(n+(n-1));i++){
+ k=1;
+ x=65;
+ i<=n?t++:t--;
+	for(j=1;j<=(n+(n-1));j++){
+    	if(j>=(n+1)-t && j<=(n-1)+t){
+        	
+            if(j>n){
+            printf("%c",x);
+            	x=x+1;
+            }else{
+        	printf("%d",k);
+            k=k+2;
+            }	
+        }	
+        else
+        	printf(" ");
+	}
+    printf("\n");
+  }
+  
+}
